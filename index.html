@@ -1,8 +1,4 @@
-<html>
-    <head>
-        <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-        <link rel="stylesheet" href="/minimal.css"/>
-        <style>.hl {
+<html><head><meta content="text/html;charset=utf-8" http-equiv="Content-Type"/><link rel="stylesheet" href="/minimal.css"/><style>.hl {
     user-select: none;
     -webkit-user-select: none;
     position: relative;
@@ -167,10 +163,7 @@
   color: #9CD9F0;
 }
 
-    </style>
-    </head>
-    <body>
-        <script type="module">
+    </style></head><body><script type="module">
          import { search, default as init } from '/tinysearch_engine.js';
          window.search = search;
          
@@ -179,8 +172,7 @@
          }
          
          run();
-      </script>
-        <script>
+      </script><script>
          function doSearch() {
            let value = document.getElementById('demo').value;
            const arr = search(value, 10);
@@ -199,32 +191,4 @@
              ul.appendChild(li);
            }
          }
-      </script>
-        <input id="demo" class="search" placeholder="Search.." onkeyup="doSearch()" type="text"/>
-        <ul id="results"></ul>
-        <div>
-            <nav>
-                <a href="/">Home</a>
-            </nav>
-            <article>
-                <div>
-                    <p>Welcome to the sauron wiki!</p>
-                    <p>This wiki is based on https://guide.elm-lang.org/ adapted for sauron.</p>
-                    <ul>
-                        <li>
-                            <a href="/Introduction.html" title="">Introduction</a>
-                        </li>
-                        <li>
-                            <a href="/Architecture.html" title="">Architecture</a>
-                            <ul>
-                                <li>
-                                    <a href="/Architecture/Quickstart.html" title="">Quick start</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </article>
-        </div>
-    </body>
-</html>
+      </script><input id="demo" class="search" placeholder="Search.." onkeyup="doSearch()" type="text"/><ul id="results"></ul><div><nav><a href="/">Home</a></nav><article><div><p>Welcome to the sauron wiki!</p><p>This wiki is based on https://guide.elm-lang.org/ adapted for sauron.</p><ul><li><a href="/Introduction.html" title="">Introduction</a></li><li><a href="/Architecture.html" title="">Architecture</a><ul><li><a href="/Architecture/Quickstart.html" title="">Quick start</a></li></ul></li></ul></div></article></div></body></html>

@@ -1,8 +1,4 @@
-<html>
-    <head>
-        <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
-        <link rel="stylesheet" href="/minimal.css"/>
-        <style>.hl {
+<html><head><meta content="text/html;charset=utf-8" http-equiv="Content-Type"/><link rel="stylesheet" href="/minimal.css"/><style>.hl {
     user-select: none;
     -webkit-user-select: none;
     position: relative;
@@ -167,10 +163,7 @@
   color: #9CD9F0;
 }
 
-    </style>
-    </head>
-    <body>
-        <script type="module">
+    </style></head><body><script type="module">
          import { search, default as init } from '/tinysearch_engine.js';
          window.search = search;
          
@@ -179,8 +172,7 @@
          }
          
          run();
-      </script>
-        <script>
+      </script><script>
          function doSearch() {
            let value = document.getElementById('demo').value;
            const arr = search(value, 10);
@@ -199,20 +191,7 @@
              ul.appendChild(li);
            }
          }
-      </script>
-        <input id="demo" class="search" placeholder="Search.." onkeyup="doSearch()" type="text"/>
-        <ul id="results"></ul>
-        <div>
-            <nav>
-                <a href="/">Home</a>
-            </nav>
-            <article>
-                <div>
-                    <h1>Sauron Architecture</h1>
-                    <p>Sauron programs always look something like this:</p>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="312" height="192">
-                            <style>line, path, circle,rect,polygon {
+      </script><input id="demo" class="search" placeholder="Search.." onkeyup="doSearch()" type="text"/><ul id="results"></ul><div><nav><a href="/">Home</a></nav><article><div><h1>Sauron Architecture</h1><p>Sauron programs always look something like this:</p><div><svg xmlns="http://www.w3.org/2000/svg" width="312" height="192"><style>line, path, circle,rect,polygon {
                           stroke: black;
                           stroke-width: 2;
                           stroke-opacity: 1;
@@ -282,79 +261,4 @@
                          }
 
                          
-                        </style>
-                            <defs>
-                                <marker id="arrow" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                                    <polygon points="0,0 0,4 4,2 0,0"></polygon>
-                                </marker>
-                                <marker id="diamond" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                                    <polygon points="0,2 2,0 4,2 2,4 0,2"></polygon>
-                                </marker>
-                                <marker id="circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                                    <circle cx="4" cy="4" r="2" class="filled"></circle>
-                                </marker>
-                                <marker id="open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                                    <circle cx="4" cy="4" r="2" class="bg_filled"></circle>
-                                </marker>
-                                <marker id="big_open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-                                    <circle cx="4" cy="4" r="3" class="bg_filled"></circle>
-                                </marker>
-                            </defs>
-                            <rect class="backdrop" x="0" y="0" width="312" height="192"></rect>
-                            <rect x="4" y="72" width="72" height="32" class="solid nofill" rx="4"></rect>
-                            <text x="18" y="92" >sauron</text>
-                            <rect x="212" y="72" width="88" height="48" class="solid nofill" rx="4"></rect>
-                            <text x="226" y="92" >web</text>
-                            <text x="242" y="108" >page</text>
-                            <polygon points="32,124 36,112 40,124" class="filled"></polygon>
-                            <text x="122" y="12" >Node</text>
-                            <line x1="236" y1="12" x2="236" y2="64" class="solid end_marked_arrow"></line>
-                            <text x="130" y="172" >Msg</text>
-                            <g>
-                                <path d="M 44,8 A 8,8 0,0,0 36,16" class="nofill"></path>
-                                <line x1="44" y1="8" x2="112" y2="8" class="solid"></line>
-                                <line x1="36" y1="16" x2="36" y2="64" class="solid"></line>
-                            </g>
-                            <g>
-                                <line x1="36" y1="128" x2="36" y2="136" class="solid"></line>
-                                <line x1="36" y1="136" x2="48" y2="160" class="solid"></line>
-                                <line x1="48" y1="160" x2="50" y2="164" class="solid"></line>
-                                <path d="M 50,164 A 8,8 0,0,0 56,168" class="nofill"></path>
-                                <line x1="56" y1="168" x2="120" y2="168" class="solid"></line>
-                            </g>
-                            <g>
-                                <line x1="160" y1="8" x2="232" y2="8" class="solid"></line>
-                                <path d="M 232,8 A 4,4 0,0,1 236,12" class="nofill"></path>
-                            </g>
-                            <g>
-                                <line x1="236" y1="128" x2="236" y2="136" class="solid"></line>
-                                <line x1="236" y1="136" x2="224" y2="160" class="solid"></line>
-                                <line x1="224" y1="160" x2="222" y2="164" class="solid"></line>
-                                <line x1="160" y1="168" x2="216" y2="168" class="solid"></line>
-                                <path d="M 222,164 A 8,8 0,0,1 216,168" class="nofill"></path>
-                            </g>
-                        </svg>
-                    </div>
-                    <p>Sauron program produces html Node tree to show on the screen. Events are sent back as messages of what is going on. "They clicked a button!"</p>
-                    <p>What happens within the sauron program through? It always breaks into 3 parts.</p>
-                    <ul>
-                        <li>Model - the state of you application</li>
-                        <li>View - a way to turn your state into Html nodes.</li>
-                        <li>Update - a way to update your  state based on messages.</li>
-                    </ul>
-                    <p>
-                        Sauron provides 
-                        <code>Component</code>
-                         trait which lets you implement a 
-                        <code>view</code>
-                         and 
-                        <code>update</code>
-                         of the 
-                        <code>Model</code>
-                         of your application.
-                    </p>
-                </div>
-            </article>
-        </div>
-    </body>
-</html>
+                        </style><defs><marker id="arrow" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><polygon points="0,0 0,4 4,2 0,0"></polygon></marker><marker id="diamond" viewBox="-2 -2 8 8" refX="4" refY="2" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><polygon points="0,2 2,0 4,2 2,4 0,2"></polygon></marker><marker id="circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><circle cx="4" cy="4" r="2" class="filled"></circle></marker><marker id="open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><circle cx="4" cy="4" r="2" class="bg_filled"></circle></marker><marker id="big_open_circle" viewBox="0 0 8 8" refX="4" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><circle cx="4" cy="4" r="3" class="bg_filled"></circle></marker></defs><rect class="backdrop" x="0" y="0" width="312" height="192"></rect><rect x="4" y="72" width="72" height="32" class="solid nofill" rx="4"></rect><text x="18" y="92" >sauron</text><rect x="212" y="72" width="88" height="48" class="solid nofill" rx="4"></rect><text x="226" y="92" >web</text><text x="242" y="108" >page</text><polygon points="32,124 36,112 40,124" class="filled"></polygon><text x="122" y="12" >Node</text><line x1="236" y1="12" x2="236" y2="64" class="solid end_marked_arrow"></line><text x="130" y="172" >Msg</text><g><path d="M 44,8 A 8,8 0,0,0 36,16" class="nofill"></path><line x1="44" y1="8" x2="112" y2="8" class="solid"></line><line x1="36" y1="16" x2="36" y2="64" class="solid"></line></g><g><line x1="36" y1="128" x2="36" y2="136" class="solid"></line><line x1="36" y1="136" x2="48" y2="160" class="solid"></line><line x1="48" y1="160" x2="50" y2="164" class="solid"></line><path d="M 50,164 A 8,8 0,0,0 56,168" class="nofill"></path><line x1="56" y1="168" x2="120" y2="168" class="solid"></line></g><g><line x1="160" y1="8" x2="232" y2="8" class="solid"></line><path d="M 232,8 A 4,4 0,0,1 236,12" class="nofill"></path></g><g><line x1="236" y1="128" x2="236" y2="136" class="solid"></line><line x1="236" y1="136" x2="224" y2="160" class="solid"></line><line x1="224" y1="160" x2="222" y2="164" class="solid"></line><line x1="160" y1="168" x2="216" y2="168" class="solid"></line><path d="M 222,164 A 8,8 0,0,1 216,168" class="nofill"></path></g></svg></div><p>Sauron program produces html Node tree to show on the screen. Events are sent back as messages of what is going on. "They clicked a button!"</p><p>What happens within the sauron program through? It always breaks into 3 parts.</p><ul><li>Model - the state of you application</li><li>View - a way to turn your state into Html nodes.</li><li>Update - a way to update your  state based on messages.</li></ul><p>Sauron provides <code>Component</code> trait which lets you implement a <code>view</code> and <code>update</code> of the <code>Model</code> of your application.</p></div></article></div></body></html>
