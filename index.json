@@ -26,17 +26,12 @@
   },
   {
     "title": "A Quick Example",
-    "url": "/Introduction.html",
+    "url": "/index.html",
     "body": "# Introduction\n\nSauron is a web framework written in rust, which can compile to webassembly to help you create robust websites and web apps.\n\nThis guide will:\n- Show you how to make interactive apps with Sauron web framework.\n\n# A Quick Example\n\n```rust\nuse sauron::html::text;\nuse sauron::prelude::*;\nuse sauron::{node, Cmd, Component, Node, Program};\n\n#[derive(Debug)]\npub enum Msg {\n    Increment,\n    Decrement,\n}\n\npub struct App {\n    count: i32,\n}\n\nimpl App {\n    pub fn new() -> Self {\n        App { count: 0 }\n    }\n}\n\nimpl Component<Msg> for App {\n    fn view(&self) -> Node<Msg> {\n        node! {\n            <main>\n                <input type=\"button\"\n                    value=\"+\"\n                    key=1\n                    on_click={|_| {\n                        Msg::Increment\n                    }}\n                />\n                <div>{text(self.count)}</div>\n                <input type=\"button\"\n                    value=\"-\"\n                    key=1\n                    on_click={|_| {\n                        Msg::Decrement\n                    }}\n                />\n            </main>\n        }\n    }\n\n    fn update(&mut self, msg: Msg) -> Cmd<Self, Msg> {\n        match msg {\n            Msg::Increment => self.count += 1,\n            Msg::Decrement => self.count -= 1,\n        }\n        Cmd::none()\n    }\n}\n\n#[wasm_bindgen(start)]\npub fn main() {\n    console_log::init_with_level(log::Level::Trace).unwrap();\n    console_error_panic_hook::set_once();\n    Program::mount_to_body(App::new());\n}\n```\n\n## Why sauron?\n- No runtime errors in practice\n- Reliable refactoring\n- Automatically enforced semantic versioning for all dependent crates.\n"
   },
   {
     "title": "Untitled",
-    "url": "/SUMMARY.html",
-    "body": "- [Introduction](Introduction.md)\n- [Architecture](Architecture.md)\n    - [Quick start](Architecture/Quickstart.md)\n    - [Buttons](Architecture/Buttons.md)\n    - [Cmd](Architecture/Cmd.md)\n    - [View](Architecture/View.md)\n"
-  },
-  {
-    "title": "Untitled",
-    "url": "/index.html",
-    "body": "Welcome to the sauron wiki!\n\nThis wiki is based on [guide.elm-lang.org](https://guide.elm-lang.org/) adapted for sauron.\n\n- [Introduction](Introduction.md)\n- [Architecture](Architecture.md)\n    - [Quick start](Architecture/Quickstart.md)\n    - [Buttons](Architecture/Buttons.md)\n    - [Cmd](Architecture/Cmd.md)\n    - [View](Architecture/View.md)\n"
+    "url": "/summary.html",
+    "body": "- [Introduction](index.md)\n- [Architecture](Architecture.md)\n    - [Quick start](Architecture/Quickstart.md)\n    - [Buttons](Architecture/Buttons.md)\n    - [Cmd](Architecture/Cmd.md)\n    - [View](Architecture/View.md)\n"
   }
 ]
